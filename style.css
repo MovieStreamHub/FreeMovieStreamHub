@@ -45,3 +45,40 @@ footer {
   background: #222;
   color: #fff;
 }
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px;
+}
+
+.movie-card {
+  background: #222;
+  color: white;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.movie-card h3 {
+  margin: 15px 0 10px;
+  font-size: 18px;
+}
+
+.movie-card a {
+  color: #fff;
+  background-color: #e50914;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+}
