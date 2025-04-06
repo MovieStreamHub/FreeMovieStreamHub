@@ -134,5 +134,30 @@
 
     loadMovies();
   </script>
+  <script>
+    // Search Functionality
+    const searchInput = document.querySelector('.search-bar input');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      const movies = document.querySelectorAll('.movie-card');
+      movies.forEach(movie => {
+        const title = movie.querySelector('h3').textContent.toLowerCase();
+        movie.style.display = title.includes(query) ? 'block' : 'none';
+      });
+    });
+
+    // Category Filter
+    const buttons = document.querySelectorAll('.categories button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const genre = button.textContent.toLowerCase();
+        const movies = document.querySelectorAll('.movie-card');
+        movies.forEach(movie => {
+          const title = movie.querySelector('h3').textContent.toLowerCase();
+          movie.style.display = title.includes(genre) ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
