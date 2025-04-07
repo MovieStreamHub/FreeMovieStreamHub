@@ -168,3 +168,31 @@
   <p><a href="https://m.imdb.com/title/tt31712434" target="_blank">IMDb</a> | 
      <a href="https://filmm.cc/3CkxPW1T" target="_blank">Watch Now</a></p>
 </div>
+<script>
+  async function loadMovies() {
+    try {
+      const response = await fetch('https://7b1ac592-56f9-4365-b70b-4ae68b6b18aa-00-284284jimen0o.sisko.replit.dev/movies');
+      const movies = await response.json();
+
+      const container = document.getElementById('movieGrid');
+      container.innerHTML = '';
+
+      movies.forEach(movie => {
+        const card = document.createElement('div');
+        card.className = 'movie-card';
+        card.innerHTML = `
+          <img src="${movie.image}" alt="${movie.title}">
+          <h3>${movie.title}</h3>
+          <a href="${movie.link}" target="_blank">Download</a>
+        `;
+        container.appendChild(card);
+      });
+    } catch (err) {
+      console.error('Failed to load movies:', err);
+      document.getElementById('movieGrid').innerHTML = '<p>Error loading movies.</p>';
+    }
+  }
+
+  // Run the function on page load
+  window.onload = loadMovies;
+</script>
