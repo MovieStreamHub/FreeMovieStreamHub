@@ -1,45 +1,53 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #1a1a1a;
-  color: white;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
 }
 
 header {
-  background: #ff6600;
-  padding: 15px;
+  background-color: #ff6600;
+  padding: 20px;
   text-align: center;
+}
+
+header h1 {
+  margin: 0;
   font-size: 24px;
-  font-weight: bold;
 }
 
-.search-bar {
+.search-container {
   text-align: center;
-  margin: 20px;
+  padding: 20px;
 }
 
-.search-bar input {
-  width: 60%;
+.search-container input {
   padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: none;
   font-size: 16px;
 }
 
 .categories {
-  text-align: center;
-  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
 }
 
 .categories button {
-  background: #ff6600;
+  background-color: #ff6600;
   color: white;
   border: none;
   padding: 10px 20px;
-  margin: 5px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.movie-grid {
+.movies-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -47,34 +55,40 @@ header {
   padding: 20px;
 }
 
-.movie-card {
-  background: #2a2a2a;
+.movie {
+  width: 180px;
+  background-color: #222;
   padding: 10px;
   border-radius: 8px;
-  width: 200px;
   text-align: center;
 }
 
-.movie-card img {
+.movie img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
-.movie-card a {
+.movie h3, .movie p {
+  color: #fff;
+  margin: 10px 0 5px;
+}
+
+.movie a {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 5px;
   padding: 6px 12px;
   background-color: #ff6600;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 footer {
-  background: #ff6600;
+  background-color: #ff6600;
   text-align: center;
-  padding: 10px;
-  position: fixed;
+  padding: 15px;
+  font-size: 14px;
+  color: #000;
+  position: sticky;
   bottom: 0;
-  width: 100%;
 }
